@@ -1,0 +1,27 @@
+const fs = require('fs').promises;
+
+async function main() {
+  const data = await fs.readFile(__filename);
+  await fs.writeFile(__filename + '.copy', data);
+  // More awaits here...
+}
+
+
+const doSomethingAsync = () => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve('I did something'), 3000)
+  })
+}
+
+const doSomething = async () => {
+  console.log(await doSomethingAsync())
+}
+
+console.log('Before')
+doSomething()
+console.log('After')
+
+main();
+console.log('TEST');
+
+

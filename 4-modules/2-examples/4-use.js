@@ -1,5 +1,6 @@
 const templateGenerator = require('./4-function');
 
-const myTemplate = templateGenerator('Hello Node!');
+// get back a function
+const myTemplate = templateGenerator('Hello Fuse!');
 
 console.log(myTemplate);

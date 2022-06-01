@@ -1,5 +1,6 @@
 // Top-level API is a function
 
+// return a function that require one argument 'title'
 module.exports = title => `
   <!DOCTYPE html>
   <html lang="en">
